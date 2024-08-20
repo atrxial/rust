@@ -1,3 +1,4 @@
+workspace = { members = [ "ML RL DL/MNIST_CNN", "ML RL DL/Mnist_cnn_torch","ML RL DL/perceptron"] }
 [package]
 name = "fibonacci"
 version = "0.1.0"
