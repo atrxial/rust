@@ -1,0 +1,40 @@
+Installing packages like `tch-rs` on your laptop involves a few steps. I'll guide you through the process:
+
+1. Install Rust:
+   If you haven't already, you need to install Rust. Visit https://www.rust-lang.org/tools/install and follow the instructions for your operating system.
+
+2. Install C++ build tools:
+   - On Windows: Install Visual Studio 2019 with C++ build tools.
+   - On macOS: Install Xcode command line tools with `xcode-select --install`.
+   - On Linux: Install GCC and other build essentials with your package manager.
+
+3. Install LibTorch:
+   `tch-rs` requires LibTorch, which is the C++ distribution of PyTorch.
+
+   - Download LibTorch from https://pytorch.org/get-started/locally/
+   - Choose the appropriate version for your system (CPU or CUDA if you have a compatible NVIDIA GPU)
+   - Extract the downloaded archive to a location on your computer
+
+4. Set environment variables:
+   You need to set the `LIBTORCH` environment variable to point to your LibTorch directory.
+
+   - On Windows (PowerShell):
+     ```
+     $env:LIBTORCH = "C:\path\to\libtorch"
+     $env:Path += ";$env:LIBTORCH\lib"
+     ```
+
+   - On macOS/Linux:
+     ```
+     export LIBTORCH=/path/to/libtorch
+     export LD_LIBRARY_PATH=${LIBTORCH}/lib:$LD_LIBRARY_PATH
+     ```
+
+5. Create a new Rust project:
+   ```
+   cargo new my_tch_project
+   cd my_tch_project
+   ```
+
+6. Add `tch-rs` to your project:
+   Edit `Cargo.toml` and add under
