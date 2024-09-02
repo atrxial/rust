@@ -1,1 +1,1 @@
-C:\Users\janis\Desktop\Janis\taf\X\info\rust\target\debug\main.exe: C:\Users\janis\Desktop\Janis\taf\X\info\rust\src\main.rs
+/home/janis/rust/target/debug/main: /home/janis/rust/src/main.rs
